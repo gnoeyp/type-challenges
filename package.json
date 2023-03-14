@@ -7,19 +7,16 @@
   "license": "MIT",
   "repository": "https://github.com/antfu/type-challenges.git",
   "scripts": {
-    "readme": "esno ./scripts/readme.ts",
-    "build": "esno ./scripts/build.ts",
-    "generate": "esno ./scripts/generate-play.ts",
-    "lint": "eslint .",
-    "translate": "esno ./scripts/translate-cli.ts",
-    "utils:release": "pnpm -C utils release"
+    "prepare": "husky install",
+    "update-readme": "node ./scripts/updateReadme.js"
   },
   "dependencies": {
     "esno": "^0.16.3",
     "fast-glob": "^3.2.11",
     "fs-extra": "^10.1.0",
     "js-yaml": "^4.1.0",
-    "lz-string": "^1.4.4"
+    "lz-string": "^1.4.4",
+    "verbal-expressions": "^1.0.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.1",
@@ -30,6 +27,7 @@
     "@types/node": "^18.0.0",
     "@types/prompts": "^2.4.2",
     "eslint": "^8.18.0",
+    "husky": "^8.0.3",
     "picocolors": "^1.0.0",
     "prompts": "^2.4.2",
     "typescript": "^4.7.4",
