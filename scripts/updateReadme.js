@@ -8,7 +8,7 @@ try {
     const regExp = VerEx().find('<a href="./questions/').then(id).anythingBut('>').then('>').maybe(' ').then('<img src="https://img.shields.io/badge/').anythingBut('"').then('"')
     const found = readmeContent.match(regExp)[0]
     const splitted = found.split('-')
-    splitted[splitted.length - 1] = 'teal"'
+    splitted[splitted.length - 1] = 'gray"'
     const target = splitted.join('-')
     readmeContent = regExp.replace(readmeContent, target)
   })
